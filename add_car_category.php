@@ -10,7 +10,16 @@
 
     <title>update cars</title>
   </head>
-  <body>
+    <style>
+      body{
+        margin:0px;
+        padding:0px;
+        background:url("static/img/image.jpg");
+        background-size :cover;
+      }
+      
+</style>
+  <Body>   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/phpt/">Home</a>
@@ -20,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/phpt/bc.php/">View Cars</a>
+          <a class="nav-link active" aria-current="page" href="/KASS/add_discount.php">DISCOUNT</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -84,25 +93,31 @@
      }
 ?>
 <div class="container mt-3">
-<h1>ADD CAR CATEGORY</h1>
+<h1 style="color:white;text-align:center;
+        margin:0px;
+        padding:0px;
+        background:url('static/img/bg5.jpg');
+        background-size :cover;
+       "
+>ADD CAR CATEGORY</h1>
     <form action="/KASS/add_car_Category.php" method="POST">
-        <div class="mb-5">
+        <div style="color:white" class="mb-5">
         <label for="car_cat" class="form-label" ><strong>CAR CATEGORY</strong></label>
         <input type="text" class="form-control" name ='car_cat' id="car_cat" placeholder="Enter car category" maxlength="15">
         </div>
-        <div class="mb-5">
+        <div style="color:white" class="mb-5">
         <label for="pcap" class="form-label" ><strong>PESSENGER CAPACITY</strong></label>
         <input type="number" class="form-control" name='pcap' id="pcap" placeholder="Enter pessenger capacity" min="0" max="25">
         </div>
-        <div class="mb-5">
+        <div style="color:white" class="mb-5">
         <label for="lug_cap" class="form-label"><strong>LUGGAGE CAPACITY(litre)</strong></label>
         <input type="number" class="form-control" id="lug_cap" name="lug_cap" placeholder="Enter Luggage Capacity" min="0" max="10000">
         </div>
-        <div class="mb-5">
+        <div style="color:white" class="mb-5">
         <label for="cost_pd" class="form-label" ><strong>COST PER DAY(Rs)</strong></label>
         <input type="number" class="form-control" name='cost_pd' id="cost_pd" placeholder="Enter cost per day" min="0" max="1000000">
         </div>
-        <div class="mb-5">
+        <div style="color:white" class="mb-5">
         <label for="lph" class="form-label" ><strong>LATE FEE PER HOUR(Rs)</strong></label>
         <input type="number" class="form-control" name='lph' id="lph" placeholder="Enter late fee per hour" min="0" max="10000">
         </div>
