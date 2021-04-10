@@ -26,7 +26,7 @@
         
     if($result){
         echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>New dicount coupon has been added</strong> 
+      <strong>New discount coupon has been added</strong> 
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
     }
