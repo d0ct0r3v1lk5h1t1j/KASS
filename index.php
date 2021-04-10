@@ -17,10 +17,6 @@
         background:url("static/img/logo.png");
         background-size :cover;
       }
-      body::before{
-        
-        opacity:0.60;
-      }
 </style>
   <body>
   <?php include('includes/header.php');?>
