@@ -7,11 +7,35 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@500&display=swap" rel="stylesheet">
     <title>New Location</title>
   </head>
+  <style>
+      body{
+        margin:0px;
+        padding:0px;
+        background:linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url("static/img/bg3.jpg");
+        background-size :cover;
+      }
+      .form-group{
+        width: 750px;
+        margin: auto;
+      }
+      .form-label{
+        color: black;
+        font-size: 23px;
+        font-family: 'Kreon', serif;
+      }
+      h1{
+        color: black;
+        font-size: 50px;
+        font-family: 'Kreon', serif;
+      }
+      
+</style>
   
-  <body style="background-color:grey;">
+  <body>
   <?php include('includes/sqlconn.php');?>
 
   <?php
@@ -40,21 +64,16 @@
     }
       // Submit these to a database
     }
-
     
 ?>
 
-
-
-<div class="container mt-3">
-
-
+<div class="container mt-4">
+  
 <h1 style='text-align:center'> Add New Location </h1>
 
-<div class="container mt-5">
+<div class="container mt-2">
 
-
-  <form action="/KASS/add_new_loc.php" method="POST">
+  <form action="/KASS/add_new_loc.php" method="POST" class="form-group">
   <div class="mb-3">
   <label for="locid" class="form-label" ><strong>Location ID</strong></label>
   <input type="text" class="form-control" name ='locid' id="locid" placeholder="Enter Location ID" maxlength="10">
@@ -80,7 +99,7 @@
 <input type="number" class="form-control" id="zip" name="zip" min="0" max="1000000" placeholder="Enter Pincode">
 </div>
 <div class="col-md-12 text-center">
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="btn btn-dark btn-lg">Submit</button>
 </div>
   </form>
 </div>
