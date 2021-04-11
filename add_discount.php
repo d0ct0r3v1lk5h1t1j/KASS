@@ -8,10 +8,34 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@500&display=swap" rel="stylesheet">
     <title>New dicount coupon</title>
   </head>
+  <style>
+      body{
+        margin:0px;
+        padding:0px;
+        background:linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url("static/img/background.jpg");
+        background-size :cover;
+      }
+      .form-group{
+        width: 750px;
+        margin: auto;
+      }
+      .form-label{
+        color: black;
+        font-size: 23px;
+        font-family: 'Kreon', serif;
+      }
+      h1{
+        color: black;
+        font-size: 48px;
+        font-family: 'Kreon', serif;
+      }     
+  </style> 
   
-  <body style="background-color:grey;">
+  <body>
   <?php include('includes/sqlconn.php');?>
 
   <?php
@@ -43,16 +67,13 @@
 ?>
 
 
-
-<div class="container mt-3">
-
-
+<div class="container mt-5">
+  
 <h1 style='text-align:center'> Add New Discount Coupon </h1>
 
 <div class="container mt-5">
 
-
-  <form action="/KASS/add_discount.php" method="POST">
+  <form action="/KASS/add_discount.php" method="POST" class="form-group">
   <div class="mb-5">
   <label for="dcode" class="form-label" ><strong>Discount Code</strong></label>
   <input type="text" class="form-control" name ='dcode' id="dcode" placeholder="Enter Dicount Code" maxlength="10">
@@ -66,11 +87,11 @@
 <input type="number" class="form-control" id="Dper" name="Dper" placeholder="Enter Discount Percentage" min="0" max="100">
 </div>
 <div class="mb-5">
-<label for="Expiry" class="form-label"><strong>Expiry:</strong></label>
+<label for="Expiry" class="form-label"><strong>Expiry</strong></label>
 <input type="date" class="form-control" id="Expiry" name="Expiry">
 </div>
 <div class="col-md-12 text-center">
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="btn btn-dark btn-lg">Submit</button>
 </div>
   </form>
 </div>
