@@ -1,4 +1,11 @@
 <header>
+
+<script type="text/javascript">
+    function logout() {
+        document.location = 'logout.php';
+    }
+</script>
+<?php include("sqlconn.php") ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">KASS</a>
@@ -11,22 +18,61 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./new_booking.php">New Booking</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Catalogue
+              <a class="nav-link active" href="./new_booking.php">New Booking</a>
+         </li>
+        <?php
+            session_start();
+            if(isset($_SESSION['user'])){
+              $user = $_SESSION['user'];
+              $sql ="select is_admin from info where email='$user';";
+              $result = mysqli_query($conn, $sql);
+              $row = mysqli_fetch_assoc($result);
+              if($row['is_admin']){
+                echo '<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/KASS/add_discount.php">Add discount coupon</a></li>
+                <li><a class="dropdown-item" href="/KASS/add_new_loc.php">Add new location</a></li>
+                <li><a class="dropdown-item" href="/KASS/add_car.php">Add new car</a></li>
+                <li><a class="dropdown-item" href="/KASS/add_car_category.php">Add new car category</a></li>
+                <li><a class="dropdown-item" href="/KASS/add_driver.php">Add new driver</a></li>
+              </ul>
+            </li>';
+              }
+              
+       }
+       
+       ?>
+       </ul>
+       
+       
+       <ul class="navbar-nav ml-auto"> 
+        <?php
+        session_start();
+        if(isset($_SESSION['user'])){
+          $user =$_SESSION['user'];
+          $sql = "select fname,lname from info where email='$user';";
+          $result = mysqli_query($conn, $sql);
+          $name = mysqli_fetch_assoc($result);
+          echo '<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Hello&nbsp; '.$name['fname'].'&nbsp;'.$name['lname'].'
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">My bookings</a></li>
+            <li><a class="dropdown-item" href="#">My Profile</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#" onClick="logout()">Logout</a></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+        </li>';
+        }
+        else{
+          echo '<li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/KASS/login.php">Login</a>
+        </li>';
+        }
+        ?>
+        
       </ul>
     </div>
   </div>
