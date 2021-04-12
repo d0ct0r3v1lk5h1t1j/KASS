@@ -7,9 +7,35 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@700&display=swap" rel="stylesheet">
+    
     <title>Signup</title>
   </head>
+
+  <style>
+      body{
+        margin:0px;
+        padding:0px;
+        background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("static/img/bgimage.jpeg");
+        background-size :cover;
+      }
+      .form-label{
+        color: white;
+        font-size: 23px;
+        font-family: 'Kreon', serif;
+      }
+      h1{
+        color: white;
+        font-size: 48px;
+        font-family: 'Kreon', serif;
+      }     
+      .form-check-label{
+        color: white;
+      }
+  </style> 
+
   <body>
 
 <!-- Js function -->
@@ -123,8 +149,9 @@ function adminCheckFunction() {
 
 
 <!-- Page front end -->
+<div class="container my-5">
     <h1 style='text-align:center'>Signup</h1>
-    <div class="container mt-5">
+    <div class="container mt-1">
 <form class="form-group row g-3" action="/KASS/signup.php" method="POST">
   <div class="col-md-4">
     <label for="fname" class="form-label">First Name</label>
@@ -202,7 +229,8 @@ function adminCheckFunction() {
   </div>
 
   <div class="col-12 text-center" >
-    <button type="submit" class="btn btn-primary">Sign up</button>
+    <button type="submit" class="btn btn-light">Sign up</button>
+  </div>
   </div>
 </form>
     
