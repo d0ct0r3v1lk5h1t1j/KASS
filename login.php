@@ -19,7 +19,7 @@
       <div class="signup"> 
           Don't have an account ?
           <br>
-          <a href="#">Sign up</a>
+          <a href="/KASS/signup.php">Sign up</a>
       </div>
 
   </body>
