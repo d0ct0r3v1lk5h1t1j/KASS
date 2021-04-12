@@ -16,11 +16,25 @@
       body{
         margin:0px;
         padding:0px;
-        background:linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url("static/img/background.jpg");
-        background-size :cover;
+      }
+      body:before{
+        content:"";
+        width:100%;
+        height:100%;
+        display: block;
+        background: url("static/img/background.jpg") center center;
+        background-repeat:repeat;
+        background-size:cover;
+        position: absolute;
+        top:0px;
+        left:0px;
+        margin:0px;
+        padding:0px;
+        opacity:0.6;
+        z-index: -1;
       }
       .form-group{
-        width: 750px;
+        width: 700px;
         margin: auto;
       }
       .form-label{
@@ -32,7 +46,12 @@
         color: black;
         font-size: 48px;
         font-family: 'Kreon', serif;
+      }
+      .btn:hover{
+        background-color:#4e5357;
+        cursor: pointer;
       }     
+      
   </style> 
   
   <body>
@@ -74,19 +93,19 @@
 <div class="container mt-5">
 
   <form action="/KASS/add_discount.php" method="POST" class="form-group">
-  <div class="mb-5">
+  <div class="mb-4">
   <label for="dcode" class="form-label" ><strong>Discount Code</strong></label>
   <input type="text" class="form-control" name ='dcode' id="dcode" placeholder="Enter Dicount Code" maxlength="10">
 </div>
-<div class="mb-5">
+<div class="mb-4">
   <label for="dname" class="form-label" ><strong>Discount name </strong></label>
   <input type="text" class="form-control" name='dname' id="dname" placeholder="Enter Discount name" maxlength="20">
 </div>
-<div class="mb-5">
+<div class="mb-4">
 <label for="Dper" class="form-label"><strong>Discount Percentage</strong></label>
 <input type="number" class="form-control" id="Dper" name="Dper" placeholder="Enter Discount Percentage" min="0" max="100">
 </div>
-<div class="mb-5">
+<div class="mb-4">
 <label for="Expiry" class="form-label"><strong>Expiry</strong></label>
 <input type="date" class="form-control" id="Expiry" name="Expiry">
 </div>
