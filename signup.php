@@ -107,7 +107,7 @@ function adminCheckFunction() {
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>';
         }
-        if(isset($_POST['dl'])){
+        if(isset($_POST['dl']) && $_POST['dl']!=""){
             $dl=$_POST['dl'];
             $sql= "UPDATE info set dl='$dl' where email='$email';";
             $result = mysqli_query($conn, $sql);
