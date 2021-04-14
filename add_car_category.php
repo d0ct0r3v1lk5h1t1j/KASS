@@ -92,12 +92,7 @@
      }
 ?>
 <div class="container mt-3">
-<h1 style="color:white;text-align:center;
-        margin:0px;
-        padding:0px;
-        background:url('static/img/bg5.jpg');
-        background-size :cover;
-       "
+<h1 style="color:white;text-align:center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
 >ADD CAR CATEGORY</h1>
     <form action="/KASS/add_car_Category.php" method="POST">
         <div style="color:white" class="mb-5">
