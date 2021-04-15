@@ -69,9 +69,9 @@
         }
         else{
           echo '<li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/KASS/login.php">Login</a>
+          <a class="nav-link active" aria-current="page" id="login-btn" href="/KASS/login.php">Login</a>
         </li><li>
-        <a class="nav-link active" aria-current="page" href="signup.php">Signup</a>
+        <a class="nav-link active" aria-current="page" id="SignUp-btn" href="signup.php">Signup</a>
         </li>';
         }
         ?>

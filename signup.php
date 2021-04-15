@@ -234,7 +234,7 @@ function adminCheckFunction() {
   </div>
 </form>
     
-    
+<?php include('includes/footer.php');?>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
