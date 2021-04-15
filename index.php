@@ -11,16 +11,74 @@
     <title>Welcome</title>
   </head>
   <style>
+       
+
+.button {
+  display: inline-block;
+  background: #00f078;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-top:-15px;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+.button:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+          transform: translate(0px, -10px) scale(1.2);
+}
+.button_1 {
+  display: inline-block;
+  background: #FCD12A;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border-radius: 5px;
+  position:absolute;
+  left: 45%;
+    top: 50%;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+.button_1:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+          transform: translate(0px, -10px) scale(1.2);
+}
+h1{
+      text-align: center;
+    margin-bottom: 45px;
+    color:white;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    left:15%;
+    top:35%;
+}
+
+</style>
+  <style>
       body{
         margin:0px;
         padding:0px;
-        background:url("static/img/logo.png");
+        background:url("static/img/pic_5.jpg");
         background-size :cover;
       }
 </style>
   <body>
   <?php include('includes/header.php');?>
+  <a class="button_1" href="new_booking.php">book now</a>
 
+<h1 > Enjoy your holidays with our wheels</h1>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
