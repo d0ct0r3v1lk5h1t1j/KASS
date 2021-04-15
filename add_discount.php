@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@500&display=swap" rel="stylesheet">
     <title>New dicount coupon</title>
+    <?php include('includes/header.php');?>
   </head>
   <style>
       body{

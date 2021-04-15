@@ -46,7 +46,8 @@
        </ul>
        
        
-       <ul class="navbar-nav ml-auto"> 
+       <ul class="navbar-nav ml-auto">
+
         <?php
         session_start();
         if(isset($_SESSION['user'])){
@@ -69,10 +70,12 @@
         else{
           echo '<li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/KASS/login.php">Login</a>
+        </li><li>
+        <a class="nav-link active" aria-current="page" href="signup.php">Signup</a>
         </li>';
         }
         ?>
-        
+         
       </ul>
     </div>
   </div>
