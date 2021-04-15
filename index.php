@@ -134,8 +134,16 @@ h1{
   </button>
 </div>
 <div style="margin-top:20px;">
-<img src="static/img/pic_5.jpg" alt="" style="z-index:-1; width:100%; object-fit:cover;">  
-<a class="button_1" href="new_booking.php">book now</a>
+<img src="static/img/pic_5.jpg" alt="" style="z-index:-1; width:100%; object-fit:cover;"> 
+<?php
+if(isset($_SESSION['user'])){
+  echo '<a class="button_1" href="new_booking.php">book now</a>';
+}
+else{
+  echo '<a class="button_1" href="login.php">book now</a>';
+}
+?> 
+
 <h1 > Enjoy your holidays with our wheels</h1>
 
 </div>
