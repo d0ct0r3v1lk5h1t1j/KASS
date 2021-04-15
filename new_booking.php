@@ -97,21 +97,23 @@
             $row=mysqli_fetch_assoc($result);
             $bid = $row['last_insert_id()'];
           }
-          
-         $sql ="insert into driver_booking values('$driver',$bid);" ;
-         $result = mysqli_query($conn, $sql);
-         if($result){
-          echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Driver booking has been added</strong> 
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>';
-      }
-      else{
-          echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-          <strong>The record was not inserted successfully because of this error --->'. mysqli_error($conn).'</strong> 
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>';
-      }
+          if(isset($_POST['driver'])){
+            $sql ="insert into driver_booking values('$driver',$bid);" ;
+            $result = mysqli_query($conn, $sql);
+            if($result){
+                    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>Driver booking has been added</strong> 
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
+            }
+            else{
+                echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>The record was not inserted successfully because of this error --->'. mysqli_error($conn).'</strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>';
+            }
+          }
+         
          $sql ="insert into car_booking values('$regno',$bid);" ;
          $result = mysqli_query($conn, $sql);
          if($result){
@@ -126,10 +128,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
       }
-    }
-
-    
+    }  
 ?>
+
+
   <!-- show Available cars -->
 <script>
 function loadCars(){
