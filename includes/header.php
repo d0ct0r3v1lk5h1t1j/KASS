@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
         </li>
         <li class="nav-item">
               <a class="nav-link active" href="./new_booking.php">New Booking</a>
@@ -67,7 +67,7 @@
         </li>';
         }
         else{
-          echo '<li class="nav-item">
+          echo '<li class="nav-item" id="login-btn">
           <a class="nav-link active" aria-current="page" href="/KASS/login.php">Login</a>
         </li>';
         }

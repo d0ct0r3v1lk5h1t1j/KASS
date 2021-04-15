@@ -10,6 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@500&display=swap" rel="stylesheet">
+   
     <title>New dicount coupon</title>
   </head>
   <style>
@@ -56,7 +57,10 @@
   
   <body>
   <?php include('includes/sqlconn.php');?>
-
+  <?php include('includes/header.php');?>
+  <script>
+   document.getElementById("login-btn").style.display="none";
+ </script>
   <?php
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -115,6 +119,7 @@
   </form>
 </div>
 </div>
+<?php include('includes/footer.php');?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
