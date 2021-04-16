@@ -5,6 +5,19 @@
         document.location = 'logout.php';
     }
 </script>
+<style>
+header{
+  position:sticky;
+  top:0;
+  z-index:1;
+}
+.nav-item:hover{
+  background-color:#ffee01;
+}
+.nav-item a:hover{
+  color: black !important;
+}
+</style>
 <?php include("sqlconn.php") ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -70,7 +83,7 @@
         else{
           echo '<li class="nav-item">
           <a class="nav-link active" aria-current="page" id="login-btn" href="./login.php">Login</a>
-        </li><li>
+        </li><li class="nav-item">
         <a class="nav-link active" aria-current="page" id="SignUp-btn" href="signup.php">Signup</a>
         </li>';
         }
