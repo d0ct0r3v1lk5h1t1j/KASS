@@ -83,7 +83,7 @@ form{
 ?>
 <div class="container mt-3">
 <h1 style="color:black;text-align:center;">ADD NEW CAR </h1>
-    <form action="/KASS/add_car.php" method="POST">
+    <form action="add_car.php" method="POST">
         <div style="color:white" class="mb-3">
         <label for="regno" class="form-label" ><strong>Registration No.</strong></label>
         <input type="text" class="form-control" name ='regno' id="regno" placeholder="Enter registraion no. of the car" maxlength="15">

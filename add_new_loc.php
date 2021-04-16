@@ -98,7 +98,7 @@ form{
 <div class="container mt-5">
 <div class="container mt-6">
 
-  <form action="/KASS/add_new_loc.php" method="POST" class="form-group row g-3">
+  <form action="add_new_loc.php" method="POST" class="form-group row g-3">
   <h1 style='text-align:center;color:#ffee01;'> Add New Location </h1>
   <div class="mb-2">
   <label for="locid" class="form-label" ><strong>Location ID</strong></label>

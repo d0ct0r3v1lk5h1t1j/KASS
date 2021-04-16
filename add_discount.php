@@ -107,7 +107,7 @@ form{
 
 <div class="container mt-3">
 
-  <form action="/KASS/add_discount.php" method="POST" class="form-group">
+  <form action="add_discount.php" method="POST" class="form-group">
   <div class="mb-4 col-md-12">
   <label for="dcode" class="form-label" ><strong>Discount Code</strong></label>
   <input type="text" class="form-control" name ='dcode' id="dcode" placeholder="Enter Dicount Code" maxlength="10">
