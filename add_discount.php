@@ -31,18 +31,10 @@
         left:0px;
         margin:0px;
         padding:0px;
-        opacity:0.6;
+        opacity:0.85;
         z-index: -1;
       }
-      .form-group{
-        width: 700px;
-        margin: auto;
-      }
-      .form-label{
-        color: black;
-        font-size: 23px;
-        font-family: 'Kreon', serif;
-      }
+    
       h1{
         color: black;
         font-size: 48px;
@@ -51,9 +43,31 @@
       .btn:hover{
         background-color:#4e5357;
         cursor: pointer;
-      }     
-      
-  </style> 
+      }   
+      label{
+  color:white !important;
+}
+
+form{
+  background-color:rgba(0,0,0,0.75);
+  margin:10px!important;
+  padding:30px 30px 10px 30px;
+}
+
+.btn{
+  position:relative;
+  bottom:30%;
+  background-color:#ffee01;
+  color:black;
+  border:black;
+  margin-top:5px;
+}
+.form-control{
+  color:#ffffff;
+  background-color:#f6f6f600;
+  border-radius:1.25rem;
+}  
+</style> 
   
   <body>
   <?php include('includes/sqlconn.php');?>
@@ -87,26 +101,26 @@
 ?>
 
 
-<div class="container mt-5">
+<div class="container mt-5 col-md-6">
   
-<h1 style='text-align:center'> Add New Discount Coupon </h1>
+<h1 style='text-align:center;'> Add New Discount Coupon </h1>
 
-<div class="container mt-5">
+<div class="container mt-3">
 
   <form action="/KASS/add_discount.php" method="POST" class="form-group">
-  <div class="mb-4">
+  <div class="mb-4 col-md-12">
   <label for="dcode" class="form-label" ><strong>Discount Code</strong></label>
   <input type="text" class="form-control" name ='dcode' id="dcode" placeholder="Enter Dicount Code" maxlength="10">
 </div>
-<div class="mb-4">
+<div class="mb-4 col-md-12">
   <label for="dname" class="form-label" ><strong>Discount name </strong></label>
   <input type="text" class="form-control" name='dname' id="dname" placeholder="Enter Discount name" maxlength="20">
 </div>
-<div class="mb-4">
+<div class="mb-4 col-md-12">
 <label for="Dper" class="form-label"><strong>Discount Percentage</strong></label>
 <input type="number" class="form-control" id="Dper" name="Dper" placeholder="Enter Discount Percentage" min="0" max="100">
 </div>
-<div class="mb-4">
+<div class="mb-4 col-md-12">
 <label for="Expiry" class="form-label"><strong>Expiry</strong></label>
 <input type="date" class="form-control" id="Expiry" name="Expiry">
 </div>

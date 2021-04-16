@@ -17,7 +17,34 @@
         background:url("static/img/image.jpg");
         background-size :cover;
       }
-      
+      label{
+  color:white !important;
+}
+
+form{
+  background-color:rgba(0,0,0,0.75);
+  margin:10px!important;
+  padding:30px 30px 10px 30px;
+}
+
+#submit-btn{
+  position:relative;
+  bottom:30%;
+  background-color:#ffee01;
+  color:black;
+  border:black;
+  margin-top:5px;
+}
+#submit-btn:hover{
+        background-color:#4e5357;
+        cursor: pointer;
+        color:white;
+      } 
+.form-control{
+  color:#ffffff;
+  background-color:#f6f6f600;
+  border-radius:1.25rem;
+} 
 </style>
   <Body>   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -48,10 +75,10 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <div class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </div>
     </div>
   </div>
 </nav>
@@ -92,36 +119,30 @@
      }
 ?>
 <div class="container mt-3">
-<h1 style="color:white;text-align:center;
-        margin:0px;
-        padding:0px;
-        background:url('static/img/bg5.jpg');
-        background-size :cover;
-       "
->ADD CAR CATEGORY</h1>
     <form action="/KASS/add_car_Category.php" method="POST">
-        <div style="color:white" class="mb-5">
+    <h1 style="color:#ffee01;text-align:center;margin:0px;padding:0px;">ADD CAR CATEGORY</h1>
+        <div style="color:white" class="mb-3">
         <label for="car_cat" class="form-label" ><strong>CAR CATEGORY</strong></label>
         <input type="text" class="form-control" name ='car_cat' id="car_cat" placeholder="Enter car category" maxlength="15">
         </div>
-        <div style="color:white" class="mb-5">
+        <div style="color:white" class="mb-3">
         <label for="pcap" class="form-label" ><strong>PESSENGER CAPACITY</strong></label>
         <input type="number" class="form-control" name='pcap' id="pcap" placeholder="Enter pessenger capacity" min="0" max="25">
         </div>
-        <div style="color:white" class="mb-5">
+        <div style="color:white" class="mb-3">
         <label for="lug_cap" class="form-label"><strong>LUGGAGE CAPACITY(litre)</strong></label>
         <input type="number" class="form-control" id="lug_cap" name="lug_cap" placeholder="Enter Luggage Capacity" min="0" max="10000">
         </div>
-        <div style="color:white" class="mb-5">
+        <div style="color:white" class="mb-3">
         <label for="cost_pd" class="form-label" ><strong>COST PER DAY(Rs)</strong></label>
         <input type="number" class="form-control" name='cost_pd' id="cost_pd" placeholder="Enter cost per day" min="0" max="1000000">
         </div>
-        <div style="color:white" class="mb-5">
+        <div style="color:white" class="mb-3">
         <label for="lph" class="form-label" ><strong>LATE FEE PER HOUR(Rs)</strong></label>
         <input type="number" class="form-control" name='lph' id="lph" placeholder="Enter late fee per hour" min="0" max="10000">
         </div>
         <div class="col-md-12 text-center">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">Submit</button>
         </div>
     </form>
 </div>

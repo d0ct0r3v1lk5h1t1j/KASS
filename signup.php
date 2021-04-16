@@ -18,12 +18,14 @@
       body{
         margin:0px;
         padding:0px;
-        background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("static/img/bgimage.jpeg");
+        background: url("static/img/bgimage.jpeg");
         background-size :cover;
+        background-attachment:scroll;
+        overflow-x: hidden
       }
       .form-label{
-        color: white;
-        font-size: 23px;
+        color: #ffee01c7;
+        font-size: 18px;
         font-family: 'Kreon', serif;
       }
       h1{
@@ -34,6 +36,33 @@
       .form-check-label{
         color: white;
       }
+
+form{
+  background-color:rgba(0,0,0,0.75);
+  margin:10px!important;
+  padding:20px 20px 10px 20px;
+}
+
+#submit-btn{
+  position:relative;
+  bottom:30%;
+  background-color:#ffee01;
+  color:black;
+  border:black;
+  margin-top:20px;
+}
+#submit-btn:hover{
+        background-color:#4e5357;
+        cursor: pointer;
+        color:white;
+      } 
+.form-control{
+  color:#ffffff;
+  background-color:#f6f6f600;
+  border-radius:1.25rem;
+  border-color:white;
+} 
+  
   </style> 
 
   <body>
@@ -150,9 +179,9 @@ function adminCheckFunction() {
 
 <!-- Page front end -->
 <div class="container my-5">
-    <h1 style='text-align:center'>Signup</h1>
     <div class="container mt-1">
 <form class="form-group row g-3" action="/KASS/signup.php" method="POST">
+<h1 style='text-align:center;color:#ffee01'>Signup</h1>
   <div class="col-md-4">
     <label for="fname" class="form-label">First Name</label>
     <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter First Name">
@@ -205,7 +234,7 @@ function adminCheckFunction() {
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="dlcheck" onclick="drivingLicense()">
-      <label class="form-check-label" for="dlCheck">
+      <label class="form-check-label" for="dlCheck" style="color:#ffee01c7">
         Do you own a Driving License?
       </label>
     </div>
@@ -218,7 +247,7 @@ function adminCheckFunction() {
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="adminCheck" onclick="adminCheckFunction()">
-      <label class="form-check-label" for="adminCheck">
+      <label class="form-check-label" for="adminCheck" style="color:#ffee01c7">
         Are you an admin?
       </label>
     </div>
@@ -229,7 +258,7 @@ function adminCheckFunction() {
   </div>
 
   <div class="col-12 text-center" >
-    <button type="submit" class="btn btn-light">Sign up</button>
+    <button type="submit" class="btn btn-light btn-lg" id="submit-btn">Sign up</button>
   </div>
   </div>
 </form>

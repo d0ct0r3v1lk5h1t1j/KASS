@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <title>Welcome</title>
+    <title>New Booking</title>
   </head>
   
   <body>
@@ -295,6 +295,11 @@ form{
   color:black;
   margin-top:5px;
 }
+#submit-btn:hover{
+        background-color:#4e5357;
+        cursor: pointer;
+        color:white;
+      } 
 .form-control{
   color:#ffffff;
   background-color:#f6f6f600;
