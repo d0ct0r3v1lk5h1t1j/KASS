@@ -69,7 +69,6 @@
             $row=mysqli_fetch_assoc($result);
             $dropLocId = $row['locid'];
           }
-          echo $discount;
           if(is_null($discount)){
             $sql ="Insert into booking(start_date,end_date,status,pickup_locid,drop_locid,driver_opted,user_email) values('$pdt','$ddt','unpaid','$pickupLocId','$dropLocId',$driverOpted,'$user');";
           }
@@ -80,7 +79,7 @@
           $result = mysqli_query($conn, $sql);
           if($result){
             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>New location has been added</strong> 
+          <strong>New booking has been added</strong> 
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
         }

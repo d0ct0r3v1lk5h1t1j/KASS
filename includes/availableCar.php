@@ -11,9 +11,8 @@
 
 
    $result = mysqli_query($conn, $sql);
-
-
-   $json = array();
+    if($result){
+        $json = array();
    while($row = mysqli_fetch_assoc($result)){
        $regno= $row['regno'];
        $model = $row['model'];
@@ -32,4 +31,7 @@
 
 
    echo json_encode($json);
+    }
+
+   
 ?>
