@@ -18,6 +18,37 @@
         background:url("static/img/car1.jpg");
         background-size :cover;
       }
+      label{
+  color:white !important;
+}
+
+form{
+  background-color:rgba(0,0,0,0.75);
+  margin:10px!important;
+  padding:30px 30px 10px 30px;
+}
+
+.btn{
+  position:relative;
+  bottom:30%;
+  background-color:#ffee01;
+  color:black;
+  border:black;
+  margin-top:5px;
+}
+.btn:hover{
+        background-color:#4e5357;
+        cursor: pointer;
+      } 
+.form-control{
+  color:#ffffff;
+  background-color:#f6f6f600;
+  border-radius:1.25rem;
+} 
+::placeholder{
+  color:grey !important;
+  opacity:0.6;
+} 
       
 </style>
   <Body>   
@@ -51,29 +82,29 @@
      }
 ?>
 <div class="container mt-3">
-<h1 style="color:white;text-align:center;">ADD NEW CAR </h1>
+<h1 style="color:black;text-align:center;">ADD NEW CAR </h1>
     <form action="/KASS/add_car.php" method="POST">
-        <div style="color:white" class="mb-4">
+        <div style="color:white" class="mb-3">
         <label for="regno" class="form-label" ><strong>Registration No.</strong></label>
         <input type="text" class="form-control" name ='regno' id="regno" placeholder="Enter registraion no. of the car" maxlength="15">
         </div>
-        <div style="color:white" class="mb-4">
+        <div style="color:white" class="mb-3">
         <label for="make" class="form-label"><strong>Make</strong></label>
         <input type="text" class="form-control" id="make" name="make" placeholder="Enter Make of the car" min="0" max="10000">
         </div>
-        <div style="color:white" class="mb-4">
+        <div style="color:white" class="mb-3">
         <label for="model" class="form-label" ><strong>Model</strong></label>
         <input type="text" class="form-control" name='model' id="model" placeholder="Enter model of the car" maxlength="15">
         </div>
-        <div style="color:white" class="mb-4">
+        <div style="color:white" class="mb-3">
         <label for="model_year" class="form-label" ><strong>Model Year</strong></label>
         <input type="number" class="form-control" name='model_year' id="model_year" placeholder="Enter Model Year" min="1900" max="2100" value="2021">
         </div>
-        <div style="color:white" class="mb-4">
+        <div style="color:white" class="mb-3">
         <label for="mileage" class="form-label" ><strong>Mileage</strong></label>
         <input type="number" class="form-control" name='mileage' id="mileage" placeholder="Enter mileage" min="0" max="100" value="15">
         </div>
-        <div style="color:white" class="mb-4">
+        <div style="color:white" class="mb-3">
         <label for="car_category" class="form-label" ><strong>Car Category</strong></label>
         <select id="car_category" name="car_category" class="form-control" placeholder="Select Car category">
         <?php
@@ -86,7 +117,7 @@
         </select>
         </div>
         <div class="col-md-12 text-center">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
         </div>
     </form>
 </div>

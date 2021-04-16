@@ -15,11 +15,11 @@
       body{
         margin:0px;
         padding:0px;
-        background:linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url("static/img/bg3.jpg");
+        background: url("static/img/bg3.jpg");
         background-size :cover;
       }
       .form-group{
-        width: 750px;
+        width: 100%;
         margin: auto;
       }
       .form-label{
@@ -32,6 +32,34 @@
         font-size: 50px;
         font-family: 'Kreon', serif;
       }
+      label{
+  color:white !important;
+}
+
+form{
+  background-color:rgba(0,0,0,0.75);
+  margin:10px!important;
+  padding:20px 20px 10px 20px;
+}
+
+#submit-btn{
+  position:relative;
+  bottom:30%;
+  background-color:#ffee01;
+  color:black;
+  border:black;
+  margin-top:20px;
+}
+#submit-btn:hover{
+        background-color:#4e5357;
+        cursor: pointer;
+        color:white;
+      } 
+.form-control{
+  color:#ffffff;
+  background-color:#f6f6f600;
+  border-radius:1.25rem;
+} 
       
 </style>
   
@@ -67,39 +95,37 @@
     
 ?>
 
-<div class="container mt-4">
-  
-<h1 style='text-align:center'> Add New Location </h1>
+<div class="container mt-5">
+<div class="container mt-6">
 
-<div class="container mt-2">
-
-  <form action="/KASS/add_new_loc.php" method="POST" class="form-group">
-  <div class="mb-3">
+  <form action="/KASS/add_new_loc.php" method="POST" class="form-group row g-3">
+  <h1 style='text-align:center;color:#ffee01;'> Add New Location </h1>
+  <div class="mb-2">
   <label for="locid" class="form-label" ><strong>Location ID</strong></label>
   <input type="text" class="form-control" name ='locid' id="locid" placeholder="Enter Location ID" maxlength="10">
 </div>
-<div class="mb-3">
+<div class="mb-2">
   <label for="lname" class="form-label" ><strong>Location name </strong></label>
   <input type="text" class="form-control" name='lname' id="lname" placeholder="Enter Location name" maxlength="20">
 </div>
-<div class="mb-3">
+<div class="col-md-6">
   <label for="street" class="form-label" ><strong>Street name </strong></label>
   <input type="text" class="form-control" name='street' id="street" placeholder="Enter Street name" maxlength="20">
 </div>
-<div class="mb-3">
+<div class="col-md-6">
   <label for="city" class="form-label" ><strong>City name </strong></label>
   <input type="text" class="form-control" name='city' id="city" placeholder="Enter City name" maxlength="20">
 </div>
-<div class="mb-3">
+<div class="col-md-6">
   <label for="state" class="form-label" ><strong>State name </strong></label>
   <input type="text" class="form-control" name='state' id="state" placeholder="Enter State name" maxlength="20">
 </div>
-<div class="mb-3">
+<div class="col-md-6">
 <label for="zip" class="form-label"><strong>Pincode</strong></label>
 <input type="number" class="form-control" id="zip" name="zip" min="0" max="1000000" placeholder="Enter Pincode">
 </div>
 <div class="col-md-12 text-center">
-<button type="submit" class="btn btn-dark btn-lg">Submit</button>
+<button type="submit" class="btn btn-dark btn-lg" id="submit-btn">Submit</button>
 </div>
   </form>
 </div>

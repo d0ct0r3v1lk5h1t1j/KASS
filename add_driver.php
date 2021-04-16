@@ -17,7 +17,33 @@
         background:url("static/img/bg9.jpg");
         background-size :cover;
       }
-      }
+      label{
+  color:white;
+}
+
+form{
+  background-color:rgba(0,0,0,0.75);
+  margin:10px!important;
+}
+
+#submit-btn{
+  position:relative;
+  bottom:30%;
+  background-color:#ffee01;
+  color:black;
+  border:black;
+  margin-top:5px;
+}
+#submit-btn:hover{
+        background-color:#4e5357;
+        cursor: pointer;
+        color:white;
+      } 
+.form-control{
+  color:#ffffff;
+  background-color:#f6f6f600;
+  border-radius:1.25rem;
+}
       
 </style>
   <Body>   
@@ -73,9 +99,9 @@
      }
 ?>
 <div class="container mt-3">
-<h1 style="color:white;text-align:center;"
->ADD DRIVER</h1>
+
     <form action="/KASS/add_driver.php" method="POST" class="form-group row g-3">
+    <h1 class="col-md-12" style="color:#ffee01;text-align:center;">ADD DRIVER</h1>
         <div style="color:white" class="col-md-4">
         <label for="fname" class="form-label" ><strong>First name</strong></label>
         <input type="text" class="form-control" name='fname' id="fname" placeholder="Enter first name" maxlength="30">
@@ -121,7 +147,7 @@
         <input type="email" class="form-control" name='email' id="email" placeholder="Enter email" maxlength="200">
         </div>
         <div class="col-md-12 mt-5 text-center">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">Submit</button>
         </div>
     </form>
 </div>
