@@ -42,7 +42,7 @@
   border-radius: 5px;
   position:absolute;
   left: 45%;
-    top:60%;
+    top:35%;
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   -webkit-transition: all ease-in-out 300ms;
@@ -62,7 +62,7 @@ h1{
     text-transform: uppercase;
     position: absolute;
     left:15%;
-    top:50%;
+    top:25%;
 }
 
 </style>
@@ -95,7 +95,22 @@ h1{
   <body>
   <?php include('includes/header.php');?>
   
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
+ 
+<div >
+<img src="static/img/pic_5.jpg" alt="" style="z-index:-1; width:100%; object-fit:cover;"> 
+<?php
+if(isset($_SESSION['user'])){
+  echo '<a class="button_1" href="new_booking.php">book now</a>';
+}
+else{
+  echo '<a class="button_1" href="login.php">book now</a>';
+}
+?> 
+
+<h1 > Enjoy your holidays with our wheels</h1>
+
+</div>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
     <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -132,20 +147,6 @@ h1{
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
-<div style="margin-top:20px;">
-<img src="static/img/pic_5.jpg" alt="" style="z-index:-1; width:100%; object-fit:cover;"> 
-<?php
-if(isset($_SESSION['user'])){
-  echo '<a class="button_1" href="new_booking.php">book now</a>';
-}
-else{
-  echo '<a class="button_1" href="login.php">book now</a>';
-}
-?> 
-
-<h1 > Enjoy your holidays with our wheels</h1>
-
 </div>
 <?php include('includes/footer.php');?>
     <!-- Optional JavaScript; choose one of the two! -->
