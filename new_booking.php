@@ -308,7 +308,7 @@ form{
 </style>
 <div class="container mt-5">
 
-  <form action="/KASS/new_booking.php" method="POST" class="form-group row g-3">
+  <form action="new_booking.php" method="POST" class="form-group row g-3">
   <div class="col-md-12 text-center" style="margin-top:10px;color:#ffee01;"><h1>New Booking</h1></div>
       <div class="col-md-6">
       <label for="pickupdt" class="form-label"><strong>Pickup&nbsp;Date&nbsp;Time</strong></label>
