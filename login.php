@@ -60,7 +60,7 @@ document.getElementById("login-btn").style.display="none";
 document.getElementById("SignUp-btn").style.display="none";
 </script>
 
-   <form action="/KASS/login.php" method="POST">
+   <form action="./login.php" method="POST">
       <h1>Login</h1>
       <div class="textbox">
          <input type="email" id="user" name="user" placeholder="Email">
