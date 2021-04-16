@@ -17,6 +17,9 @@
       include('includes/header.php');
       include('includes/sqlconn.php');
   ?>
+   <script>
+      document.getElementById("newBooking-btn").style.display="none";
+      </script>
 
 
 <!-- Backend php -->
@@ -260,8 +263,48 @@ function driverOptedFunction() {
 </script>
 
 <!-- Form front end -->
+
+<style>
+body{
+  margin:0px;
+  padding:0px;
+}
+body:before{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+  background:url("static/img/new_booking_bg.jpg") no-repeat center center;
+  background-size:cover;
+  z-index:-1;
+}
+
+label{
+  color:white;
+}
+
+form{
+  background-color:rgba(0,0,0,0.5);
+  margin-bottom:10px;
+}
+
+#submit-btn{
+  position:relative;
+  bottom:30%;
+  background-color:#ffee01;
+  color:black;
+  margin-top:5px;
+}
+.form-control{
+  color:#ffffff;
+  background-color:#f6f6f600;
+  border-radius:1.25rem;
+}
+</style>
 <div class="container mt-5">
+
   <form action="/KASS/new_booking.php" method="POST" class="form-group row g-3">
+  <div class="col-md-12 text-center" style="margin-top:10px;color:#ffee01;"><h1>New Booking</h1></div>
       <div class="col-md-6">
       <label for="pickupdt" class="form-label"><strong>Pickup&nbsp;Date&nbsp;Time</strong></label>
       <input type="datetime-local" class="form-control" id="pickupdt" name="pickupdt">
@@ -270,7 +313,7 @@ function driverOptedFunction() {
       <label for="dropdt" class="form-label"><strong>Drop&nbsp;Date&nbsp;Time</strong></label>
       <input type="datetime-local" class="form-control" id="dropdt" name="dropdt">
       </div>
-      <div class="col-12">
+      <div class="col-md-6">
       <label for="car_category" class="form-label" ><strong>Select Car category</strong></label>
       <select id="car_category" name="car_category" class="form-control" onchange="loadCars()" >
         <?php
@@ -283,7 +326,7 @@ function driverOptedFunction() {
         ?>
         </select>
     </div>
-    <div class="col-12">
+    <div class="col-md-6">
       <label for="car" class="form-label" ><strong>Select Car</strong></label>
       <select id="car" name="car" class="form-control" >
         </select>
@@ -331,7 +374,7 @@ function driverOptedFunction() {
       </label>
     </div>
   </div>
-  <div class="col-12">
+  <div class="col-4">
       <label for="driver" id="driverlbl" class="form-label" style="display:none"><strong>Select driver</strong></label>
       <select id="driver" name="driver" class="form-control" style="display:none" >
         </select>
@@ -344,12 +387,12 @@ function driverOptedFunction() {
       </label>
     </div>
   </div>
-  <div class="col-12">
+  <div class="col-4">
   <label  id="discountlbl" for="discountpass" class="form-label" style="display:none">Enter discount Coupon</label>
   <input type="text" class="form-control" id="discountpass" name="discountpass" style="display:none">
   </div>
     <div class="col-md-12 text-center">
-    <button type="submit" class="btn btn-dark btn-lg">Submit</button>
+    <button type="submit" class="btn btn-dark btn-lg" id="submit-btn">Submit</button>
     </div>
 
   </form>

@@ -18,7 +18,7 @@
           <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
         </li>
         <li class="nav-item">
-              <a class="nav-link active" href="./new_booking.php">New Booking</a>
+              <a class="nav-link active" href="./new_booking.php" id="newBooking-btn">New Booking</a>
          </li>
         <?php
             session_start();
