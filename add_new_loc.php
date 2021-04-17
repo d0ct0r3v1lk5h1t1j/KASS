@@ -64,6 +64,7 @@ form{
 </style>
   
   <body>
+  <?php include('includes/header.php');?>
   <?php include('includes/sqlconn.php');?>
 
   <?php
