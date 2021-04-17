@@ -5,6 +5,19 @@
         document.location = 'logout.php';
     }
 </script>
+<style>
+header{
+  position:sticky;
+  top:0;
+  z-index:1;
+}
+.nav-item:hover{
+  background-color:#ffee01;
+}
+.nav-item a:hover{
+  color: black !important;
+}
+</style>
 <?php include("sqlconn.php") ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -31,11 +44,11 @@
                 echo '<li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/KASS/add_discount.php">Add discount coupon</a></li>
-                <li><a class="dropdown-item" href="/KASS/add_new_loc.php">Add new location</a></li>
-                <li><a class="dropdown-item" href="/KASS/add_car.php">Add new car</a></li>
-                <li><a class="dropdown-item" href="/KASS/add_car_category.php">Add new car category</a></li>
-                <li><a class="dropdown-item" href="/KASS/add_driver.php">Add new driver</a></li>
+                <li><a class="dropdown-item" href="add_discount.php">Add discount coupon</a></li>
+                <li><a class="dropdown-item" href="add_new_loc.php">Add new location</a></li>
+                <li><a class="dropdown-item" href="add_car.php">Add new car</a></li>
+                <li><a class="dropdown-item" href="add_car_category.php">Add new car category</a></li>
+                <li><a class="dropdown-item" href="add_driver.php">Add new driver</a></li>
               </ul>
             </li>';
               }
@@ -70,7 +83,7 @@
         else{
           echo '<li class="nav-item">
           <a class="nav-link active" aria-current="page" id="login-btn" href="./login.php">Login</a>
-        </li><li>
+        </li><li class="nav-item">
         <a class="nav-link active" aria-current="page" id="SignUp-btn" href="signup.php">Signup</a>
         </li>';
         }

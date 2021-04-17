@@ -182,7 +182,7 @@ function adminCheckFunction() {
 <!-- Page front end -->
 <div class="container my-5">
     <div class="container mt-1">
-<form class="form-group row g-3" action="/KASS/signup.php" method="POST">
+<form class="form-group row g-3" action="./signup.php" method="POST">
 <h1 style='text-align:center;color:#ffee01'>Signup</h1>
   <div class="col-md-4">
     <label for="fname" class="form-label">First Name</label>

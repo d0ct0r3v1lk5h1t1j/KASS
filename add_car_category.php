@@ -87,7 +87,7 @@ include("includes/header.php");
      }
 ?>
 <div class="container mt-3">
-    <form action="/KASS/add_car_Category.php" method="POST">
+    <form action="add_car_Category.php" method="POST">
     <h1 style="color:#ffee01;text-align:center;margin:0px;padding:0px;">ADD CAR CATEGORY</h1>
         <div style="color:white" class="mb-3">
         <label for="car_cat" class="form-label" ><strong>CAR CATEGORY</strong></label>

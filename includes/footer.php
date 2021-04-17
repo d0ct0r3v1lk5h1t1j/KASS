@@ -22,5 +22,5 @@ footer{
       }
 </style>
 <footer>
-  Copyright &copy 2021 KASS. All rights reserved | <a href="#">Privacy Policy</a>
+  Copyright &copy 2021 KASS. All rights reserved | <a href="./privacy_policy.php">Privacy Policy</a>
 </footer>

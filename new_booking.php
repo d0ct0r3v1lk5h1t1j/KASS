@@ -72,7 +72,6 @@
             $row=mysqli_fetch_assoc($result);
             $dropLocId = $row['locid'];
           }
-          echo $discount;
           if(is_null($discount)){
             $sql ="Insert into booking(start_date,end_date,status,pickup_locid,drop_locid,driver_opted,user_email) values('$pdt','$ddt','unpaid','$pickupLocId','$dropLocId',$driverOpted,'$user');";
           }
@@ -83,7 +82,7 @@
           $result = mysqli_query($conn, $sql);
           if($result){
             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>New location has been added</strong> 
+          <strong>New booking has been added</strong> 
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
         }
@@ -100,7 +99,7 @@
             $row=mysqli_fetch_assoc($result);
             $bid = $row['last_insert_id()'];
           }
-          if(isset($_POST['driver'])){
+          if (isset($_POST['driverCheck'])){
             $sql ="insert into driver_booking values('$driver',$bid);" ;
             $result = mysqli_query($conn, $sql);
             if($result){
@@ -308,7 +307,7 @@ form{
 </style>
 <div class="container mt-5">
 
-  <form action="/KASS/new_booking.php" method="POST" class="form-group row g-3">
+  <form action="new_booking.php" method="POST" class="form-group row g-3">
   <div class="col-md-12 text-center" style="margin-top:10px;color:#ffee01;"><h1>New Booking</h1></div>
       <div class="col-md-6">
       <label for="pickupdt" class="form-label"><strong>Pickup&nbsp;Date&nbsp;Time</strong></label>
@@ -342,6 +341,7 @@ form{
         <?php
             $sql = 'select distinct(street) from location';
             $result = mysqli_query($conn, $sql);
+            echo "<option value=''>--Choose Street--</option>";
             while($row = mysqli_fetch_assoc($result)){
                 echo "<option value='".$row['street']."'>".$row['street']."</option>";           
             }
@@ -359,6 +359,7 @@ form{
         <?php
             $sql = 'select distinct(street) from location';
             $result = mysqli_query($conn, $sql);
+            echo "<option value=''>--Choose Street--</option>";
             while($row = mysqli_fetch_assoc($result)){
                 echo "<option value='".$row['locid']."'>".$row['street']."</option>";           
             }

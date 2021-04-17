@@ -47,9 +47,7 @@ form{
       
 </style>
   <Body>   
-  <?php
-include("includes/header.php");
-?>
+
 <?php
      if($_SERVER['REQUEST_METHOD']=='POST')
      {
@@ -95,7 +93,7 @@ include("includes/header.php");
 ?>
 <div class="container mt-3">
 
-    <form action="/KASS/add_driver.php" method="POST" class="form-group row g-3">
+    <form action="add_driver.php" method="POST" class="form-group row g-3">
     <h1 class="col-md-12" style="color:#ffee01;text-align:center;">ADD DRIVER</h1>
         <div style="color:white" class="col-md-4">
         <label for="fname" class="form-label" ><strong>First name</strong></label>
