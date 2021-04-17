@@ -17,6 +17,70 @@
   
   
   <body>
+  <style>
+  body{
+    margin:0px;
+    padding:0px;
+  }
+  body:before{
+    content:"";
+    width:100%;
+    height:100%;
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    background:url('static/img/my_bookings_bg.png') repeat center center;
+    background-size:contain;
+    z-index:-1;
+    opacity:0.5;
+  }
+  table{
+    background:#212529;
+    color:white;
+  }
+  th{
+    color:#ffee01;
+  }
+  tr{
+    color:white;
+  }
+  td{
+    color:white;
+  }
+  h1{
+    background-color:rgb(0,0,0);
+    color:#ffee01;
+    margin-bottom:0px;
+  }
+  .retCar{
+    background-color:#ffee01;
+    color:black;
+    border:black;
+  }
+  .retCar:hover{
+    background-color:#504d1c;
+    color:white;
+  }
+  .cancel{
+    background-color:red;
+    color:black;
+    border:black;
+  }
+  .cancel:hover{
+    background-color:#5d1818;
+    color:white;
+  }
+  .pay{
+    background:#22dc22;
+    border:black;
+    color:black;
+  }
+  .pay:hover{
+    background:#136513;
+    color:white;
+  }
+  </style>
   <?php include('includes/sqlconn.php');?>
 <!-- Button trigger modal -->
 <?php
@@ -195,7 +259,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' ){
 <div class="container mt-5">
   
 <h1 style='text-align:center'> My bookings </h1>
-<table class="table table-striped">
+<table class="table table-striped table-hover">
 <thead>
     <tr>
       <th scope="col">ID</th>
@@ -212,7 +276,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' ){
   <tbody>
 <?php
 $user = $_SESSION['user'];
-$sql = "select b.bid,b.start_date,b.end_date,c.regno,b.status,b.act_ret_time from booking b, driver d,driver_booking db,car c,car_booking cb where db.bid=b.bid and cb.bid=b.bid and d.dl_num=db.dl_num and c.regno=cb.regno and user_email='$user'; ";
+$sql ="select b.bid,b.start_date,b.end_date,c.regno,b.status,b.act_ret_time from booking b, car c,car_booking cb where cb.bid=b.bid and c.regno=cb.regno and user_email='$user'; ";
 $result = mysqli_query($conn, $sql);
 
 while($row = mysqli_fetch_assoc($result)){
@@ -224,7 +288,7 @@ while($row = mysqli_fetch_assoc($result)){
     <td>".$row['status']."</td>
     ";
     if($row['status']=="unpaid" && !is_null($row['act_ret_time'])){
-        echo '<td><button type="button" class="pay btn btn-primary" data-bs-toggle="modal" data-bs-target="#paynowModal">
+        echo '<td><button type="button" class="pay btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#paynowModal">
         Pay Now
       </button>
       </td>';
@@ -240,7 +304,7 @@ while($row = mysqli_fetch_assoc($result)){
         echo '<td> Cancellation Window unavailable</td>';
     }
     if(is_null($row['act_ret_time']) && $row['status']!=='cancelled'){
-        echo '<td><button type="button" class="retCar btn btn-primary">
+        echo '<td><button type="button" class="retCar btn btn-primary btn-sm">
         Return Car
       </button>
       </td>';
@@ -258,7 +322,7 @@ while($row = mysqli_fetch_assoc($result)){
 <div class="container mt-5">
   
 <h1 style='text-align:center'> My Bills </h1>
-<table class="table table-striped">
+<table class="table table-striped table-hover">
 <thead>
     <tr>
       <th scope="col">Bill ID</th>
