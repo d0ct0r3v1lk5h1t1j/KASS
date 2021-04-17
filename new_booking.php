@@ -99,7 +99,7 @@
             $row=mysqli_fetch_assoc($result);
             $bid = $row['last_insert_id()'];
           }
-          if(isset($_POST['driver'])){
+          if (isset($_POST['driverCheck'])){
             $sql ="insert into driver_booking values('$driver',$bid);" ;
             $result = mysqli_query($conn, $sql);
             if($result){
@@ -341,6 +341,7 @@ form{
         <?php
             $sql = 'select distinct(street) from location';
             $result = mysqli_query($conn, $sql);
+            echo "<option value=''>--Choose Street--</option>";
             while($row = mysqli_fetch_assoc($result)){
                 echo "<option value='".$row['street']."'>".$row['street']."</option>";           
             }
@@ -358,6 +359,7 @@ form{
         <?php
             $sql = 'select distinct(street) from location';
             $result = mysqli_query($conn, $sql);
+            echo "<option value=''>--Choose Street--</option>";
             while($row = mysqli_fetch_assoc($result)){
                 echo "<option value='".$row['locid']."'>".$row['street']."</option>";           
             }
