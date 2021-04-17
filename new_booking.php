@@ -45,7 +45,7 @@
         if(isset($_SESSION['user'])){
           $user = $_SESSION['user'];
         }
-        if(isset($_POST['driverCheck'])){
+        if(!(empty($_POST['driverCheck']))){
           $driverOpted=1;
         }
         if(isset($_POST['discountpass'])){
@@ -99,7 +99,7 @@
             $row=mysqli_fetch_assoc($result);
             $bid = $row['last_insert_id()'];
           }
-          if (isset($_POST['driverCheck'])){
+          if (!(empty($_POST['driverCheck']))){
             $sql ="insert into driver_booking values('$driver',$bid);" ;
             $result = mysqli_query($conn, $sql);
             if($result){
@@ -374,7 +374,7 @@ form{
     
     <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="driverCheck" onclick="driverOptedFunction()">
+      <input class="form-check-input" type="checkbox" id="driverCheck" name="driverCheck" onclick="driverOptedFunction()">
       <label class="form-check-label" for="driverCheck">
         Want to opt for a Driver?
       </label>
@@ -387,7 +387,7 @@ form{
     </div>
     <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="discountCheck" onclick="discountCheckFunction()">
+      <input class="form-check-input" type="checkbox" id="discountCheck" name="discountCheck" onclick="discountCheckFunction()">
       <label class="form-check-label" for="discountCheck">
         Have a discount coupon?Redeem now!
       </label>

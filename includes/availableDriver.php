@@ -6,7 +6,7 @@
 
    $sql = "SELECT d.dl_num,d.fname,d.lname,d.experience FROM driver d
          WHERE d.city='".$_GET['city']."' and not exists(select * from driver_booking db,booking b where db.dl_num=d.dl_num and b.bid=db.bid 
-         and b.end_date>='".$_GET['pickup']."' or b.start_date>='".$_GET['dropdt']."');"; 
+         and b.end_date>='".$_GET['pickup']."' and b.start_date<='".$_GET['dropdt']."');"; 
 
 
    $result = mysqli_query($conn, $sql);
