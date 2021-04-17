@@ -15,7 +15,6 @@
     <style>
         
         body{
-    margin-top:20px;
     color: #1a202c;
     text-align: left;
     background-color: #e2e8f0;   
@@ -76,10 +75,12 @@
         </style>
   </head>
   <body>
+  <?php
+include("includes/header.php");
+?>
   <h1>MY PROFILE</h1>
     <?php
     include("includes/sqlconn.php");
-    session_start();
     if(isset($_SESSION['user'])){
     $user = $_SESSION['user'];
     $sql = "select * from info where info.email='$user';";
