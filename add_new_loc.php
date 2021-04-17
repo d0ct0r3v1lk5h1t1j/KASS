@@ -66,7 +66,9 @@ form{
   <body>
   <?php include('includes/header.php');?>
   <?php include('includes/sqlconn.php');?>
-
+  <?php
+include("includes/header.php");
+?>
   <?php
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){

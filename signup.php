@@ -66,7 +66,9 @@ form{
   </style> 
 
   <body>
-
+  <?php
+include("includes/header.php");
+?>
 <!-- Js function -->
 <script>
 function drivingLicense() {

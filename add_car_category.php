@@ -47,41 +47,9 @@ form{
 } 
 </style>
   <Body>   
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/KASS/">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/KASS/add_discount.php">DISCOUNT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/KASS/add_car.php">ADD CAR</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ADD NEW
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/KASS/add_car.php">car</a></li>
-            <li><a class="dropdown-item" href="/KASS/add_car_category.php">car category</a></li>
-            <li><a class="dropdown-item" href="/KASS/add_discount.php">discount coupon</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <div class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </div>
-    </div>
-  </div>
-</nav>
+<?php
+include("includes/header.php");
+?>
 <?php
      if($_SERVER['REQUEST_METHOD']=='POST')
      {
