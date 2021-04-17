@@ -71,8 +71,8 @@ form{
         if (!$conn){
             die("Sorry we failed to connect: ". mysqli_connect_error());
         }
-        $sql ="INSERT INTO `driver` ( `fname`, `mname`, `lname`, `aadhar_num`,`dl_num`,'experience', `street`, `city`, `state`, `pincode`, `email`) 
-        VALUES ( '$fname', '$mname', '$lname', '$aadhar_num','$dl_num', '$experience''$street', '$city', '$state', '$pincode', '$email');";
+        $sql ="INSERT INTO `driver` ( `fname`, `mname`, `lname`, `aadhar_num`,`dl_num`,experience, `street`, `city`, `state`, `pincode`, `email`) 
+        VALUES ( '$fname', '$mname', '$lname', '$aadhar_num','$dl_num', $experience,'$street', '$city', '$state', '$pincode', '$email');";
         $result = mysqli_query($conn, $sql);
 
         if($result){
@@ -83,10 +83,10 @@ form{
         }
         else{
            // echo "The car was not inserted successfully because of this error ---> ". mysqli_error($conn);
-           echo '<div class="alert success alert-danger alert-dismissible fade show" role="alert">
-            <strong>Failed!</strong> Due to some technical issues your request can not be processed.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>';
+           echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+           <strong>The record was not inserted successfully because of this error --->'. mysqli_error($conn).'</strong> 
+           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>';
         }
           
      }

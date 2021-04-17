@@ -7,7 +7,7 @@
    $sql = "SELECT c.regno,c.model,c.make,c.model_year,c.mileage FROM car c
          WHERE c.category='".$_GET['id']."' 
          and not exists(select * from car_booking cb,booking b where cb.regno=c.regno and b.bid=cb.bid 
-         and b.end_date>='".$_GET['pickup']."' or b.start_date>='".$_GET['dropdt']."');"; 
+         and b.end_date>='".$_GET['pickup']."' and b.start_date<='".$_GET['dropdt']."');"; 
 
 
    $result = mysqli_query($conn, $sql);
