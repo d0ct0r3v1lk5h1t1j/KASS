@@ -88,10 +88,7 @@ include("includes/header.php");
         echo'
         <div class="container">
     <div class="main-body">
-    
-         
-    
-          <div class="row gutters-sm">
+       <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
                 <div class="card-body">
@@ -107,7 +104,7 @@ include("includes/header.php");
             <div class="col-md-8">
               <div class="card ">
                 <div class="card-body">
-            <div class="row">
+                  <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">make</h6>
                     </div>
