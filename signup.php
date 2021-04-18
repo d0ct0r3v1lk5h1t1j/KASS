@@ -18,7 +18,7 @@
       body{
         margin:0px;
         padding:0px;
-        background: url("static/img/bgimage.jpeg");
+        background: url("static/img/pc.jpg");
         background-size :cover;
         background-attachment:scroll;
         overflow-x: hidden
