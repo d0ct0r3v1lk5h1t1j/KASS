@@ -47,7 +47,7 @@ form{
       
 </style>
   <Body>   
-
+  <?php include('includes/header.php');?>
 <?php
      if($_SERVER['REQUEST_METHOD']=='POST')
      {
@@ -125,7 +125,7 @@ form{
         </div>
         <div style="color:white" class="col-md-4">
         <label for="city" class="form-label" ><strong>City</strong></label>
-        <input type="text" class="form-control" name='city' id="city" placeholder="Enter Cityr"  maxlength="30">
+        <input type="text" class="form-control" name='city' id="city" placeholder="Enter City"  maxlength="30">
         </div>
         <div style="color:white" class="col-md-4">
         <label for="state" class="form-label" ><strong>State</strong></label>
@@ -145,6 +145,7 @@ form{
     </form>
 </div>
 <?php include('includes/footer.php');?>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
