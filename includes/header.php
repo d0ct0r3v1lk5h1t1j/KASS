@@ -33,6 +33,9 @@ header{
         <li class="nav-item">
               <a class="nav-link active" href="./new_booking.php" id="newBooking-btn">New Booking</a>
          </li>
+         <li class="nav-item">
+              <a class="nav-link active" href="view_car.php" id="newBooking-btn">View car</a>
+         </li>
         <?php
             session_start();
             if(isset($_SESSION['user'])){

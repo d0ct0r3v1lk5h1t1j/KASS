@@ -63,12 +63,12 @@
   
   </style>
   <div class="container">
-  <div class="card" style="">
+  <div class="card" style="" >
   <img src="static/img/sedan.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h3 class="card-title">Sedan</h3>
     <p class="card-text">Sedan models are the most classy ones and our cutomers have reviewed them to be the best for a business trip.</p>
-    <a href="#" class="btn btn-primary card-btn">View Available Cars</a>
+    <a href="sedan.php" class="btn btn-primary card-btn">View Available Cars</a>
   </div>
 </div>
 <div class="card" style="">
@@ -76,15 +76,15 @@
   <div class="card-body">
     <h3 class="card-title">Mini</h3>
     <p class="card-text">Mini models are small but can take you anywhere and everywhere.Worried about the traffic and need a quick ride? Book a mini.</p>
-    <a href="#" class="btn btn-primary card-btn">View Available Cars</a>
+    <a href="mini.php" class="btn btn-primary card-btn">View Available Cars</a>
   </div>
 </div>
 <div class="card" style="">
   <img src="static/img/suv.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <h3 class="card-title">SUV</h3>
+    <h3 class="card-title" >SUV</h3>
     <p class="card-text">SUVs are the most comfortable cars. Got a big family trip planned to countryside? Don't worry we got you covered.</p>
-    <a href="#" class="btn btn-primary card-btn">View Available Cars</a>
+    <a href="SUV.php" class="btn btn-primary card-btn">View Available Cars</a>
   </div>
 </div>
 </div>
