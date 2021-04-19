@@ -109,8 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' ){
             }
         }
         else{
-            echo $days;
-            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
               <strong>Booking cannot be cancelled within 5 days of Pickup date</strong> 
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>';
@@ -128,7 +127,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' ){
         }
     
         else{
-            echo $days;
             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
               <strong>Payment unsuccessful</strong> 
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

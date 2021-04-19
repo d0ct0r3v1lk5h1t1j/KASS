@@ -103,10 +103,23 @@
             $sql ="insert into driver_booking values('$driver',$bid);" ;
             $result = mysqli_query($conn, $sql);
             if($result){
-                    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                  <strong>Driver booking has been added</strong> 
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>';
+                //     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                //   <strong>Driver booking has been added</strong> 
+                //   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                // </div>';
+                // $sql = "select email from driver where dl_num='$driver';";
+                // $result2 = mysqli_query($conn, $sql);
+                // if(mysqli_num_rows($result2)>0){
+                //   $row=mysqli_fetch_assoc($result2);
+                //   $to = $row['email'];
+                //   $subject = "New Booking for you";
+                //   // Always set content-type when sending HTML email
+                //   $message = "New booking for You , pickup Location and Time : $pstr , $pdt";
+                //   // More headers
+                //   $headers = 'From: shivamagr2711@gmail.com' . "\r\n";
+
+                //   mail($to,$subject,$message,$headers);
+                // }
             }
             else{
                 echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -119,10 +132,10 @@
          $sql ="insert into car_booking values('$regno',$bid);" ;
          $result = mysqli_query($conn, $sql);
          if($result){
-          echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Car Booking has been added</strong> 
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>';
+      //     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+      //   <strong>Car Booking has been added</strong> 
+      //   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      // </div>';
       }
       else{
           echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
