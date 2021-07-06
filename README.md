@@ -18,4 +18,3 @@ Following tasks were achieved :
 
 SceenShots : 
 
-https://github.com/Samdroid27/KASS/blob/main/ScreenShots/kass_scrnshot.jpeg
