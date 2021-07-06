@@ -16,4 +16,6 @@ Following tasks were achieved :
 
 4) A view car tab to see available cars within 3 categories as Sedan, SUV and Mini to make the bookings as per user's comfort.
 
+SceenShots : 
 
+https://github.com/Samdroid27/KASS/blob/main/ScreenShots/kass_scrnshot.jpeg
