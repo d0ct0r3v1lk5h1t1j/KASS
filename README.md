@@ -16,8 +16,24 @@ Following tasks were achieved :
 
 4) A view car tab to see available cars within 3 categories as Sedan, SUV and Mini to make the bookings as per user's comfort.
 
-SceenShots : 
+SceenShots:
 
-![](ScreenShots/kass_scrnshot.jpeg)
+*Home Page*
++ ![](ScreenShots/kass_scrnshot_1.jpeg)
+
+ *Login Page*
++ ![](ScreenShots/kass_scrnshot_2.jpeg)
+
+*New Booking Page*
++ ![](ScreenShots/kass_scrnshot_3.jpeg)
+
+*Bookings and Billing History*
++ ![](ScreenShots/kass_scrnshot_4.jpeg)
+
+*Profile*
++ ![](ScreenShots/kass_scrnshot_5.jpeg)
+
+*Car Info*
++ ![](ScreenShots/kass_scrnshot.jpeg)
 
 
