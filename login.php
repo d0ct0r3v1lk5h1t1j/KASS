@@ -65,9 +65,6 @@ document.getElementById("SignUp-btn").style.display="none";
       <div class="textbox">
          <input type="email" id="user" name="user" placeholder="Email">
       </div>
-      <div class="textboxdiv">
-         <input type="password" id="pass" name="pass" placeholder="Password">
-      </div>
       <div>
         <button type="submit" class="btn" style="color: black">login</button>
       </div>
